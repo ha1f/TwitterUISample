@@ -12,6 +12,9 @@ struct Tweet {
     /// 名前
     var name: String
     
+    /// アイコン画像
+    var iconImage: UIImage? = UIImage(named: "ha1f")
+    
     /// 本文
     var content: String
     

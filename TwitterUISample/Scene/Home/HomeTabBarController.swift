@@ -11,25 +11,25 @@ final class HomeTabBarController: UITabBarController {
     let notificationViewController = NotificationViewController()
     let directMessageViewController = DirectMessageViewController()
     
+    static func _tabBarItemTag(for viewController: UIViewController) -> Int {
+        if viewController is TimelineViewController {
+            return 1
+        }
+        if viewController is SearchViewController {
+            return 2
+        }
+        if viewController is NotificationViewController {
+            return 3
+        }
+        if viewController is DirectMessageViewController {
+            return 4
+        }
+        assertionFailure("Invalid view controller passed for \(#function)")
+        return 0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        timelineViewController.tabBarItem = UITabBarItem(
-            tabBarSystemItem: .contacts,
-            tag: 1
-        )
-        searchViewController.tabBarItem = UITabBarItem(
-            tabBarSystemItem: .search,
-            tag: 2
-        )
-        notificationViewController.tabBarItem = UITabBarItem(
-            tabBarSystemItem: .mostViewed,
-            tag: 3
-        )
-        directMessageViewController.tabBarItem = UITabBarItem(
-            tabBarSystemItem: .contacts,
-            tag: 4
-        )
         
         setViewControllers([
             timelineViewController.wrappingWithNavigationController(),

@@ -34,7 +34,7 @@
                                     </constraints>
                                     <state key="normal" title="Button" image="ellipsis" catalog="system"/>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGx-rt-CJx">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGx-rt-CJx">
                                     <rect key="frame" x="10" y="5" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="Yh7-9l-viE"/>
@@ -82,23 +82,27 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-Mr-zOv">
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-Mr-zOv">
                                     <rect key="frame" x="68" y="278" width="354" height="30"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-sq-zVb">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-sq-zVb">
+                                            <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
                                             <state key="normal" title="Button"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWm-wD-P2D">
-                                            <rect key="frame" x="102.5" y="0.0" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWm-wD-P2D">
+                                            <rect key="frame" x="88.5" y="0.0" width="88.5" height="30"/>
                                             <state key="normal" title="Button"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxC-vE-YGv">
-                                            <rect key="frame" x="205.5" y="0.0" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxC-vE-YGv">
+                                            <rect key="frame" x="177" y="0.0" width="88.5" height="30"/>
                                             <state key="normal" title="Button"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-uq-s8e">
-                                            <rect key="frame" x="308" y="0.0" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-uq-s8e">
+                                            <rect key="frame" x="265.5" y="0.0" width="88.5" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR6-Av-MLQ">
+                                            <rect key="frame" x="354" y="0.0" width="0.0" height="30"/>
                                             <state key="normal" title="Button"/>
                                         </button>
                                     </subviews>
@@ -138,12 +142,17 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="analyticsButton" destination="HR6-Av-MLQ" id="xeD-s3-AhJ"/>
                 <outlet property="contentLabel" destination="Xfx-gA-3Pg" id="ONB-DN-RAH"/>
                 <outlet property="iconButton" destination="tGx-rt-CJx" id="oLg-cP-TfD"/>
+                <outlet property="likeButton" destination="rxC-vE-YGv" id="CHx-os-cF9"/>
                 <outlet property="moreButton" destination="557-cr-xjq" id="bS7-8O-v0m"/>
                 <outlet property="nameLabel" destination="WMF-E0-y9S" id="X3M-fW-aps"/>
                 <outlet property="relativeTimeLabel" destination="loU-Sn-G6q" id="GOS-C8-MLR"/>
+                <outlet property="replyButton" destination="vSb-sq-zVb" id="vhg-3r-L0K"/>
+                <outlet property="retweetButton" destination="FWm-wD-P2D" id="2Ra-la-qkV"/>
                 <outlet property="screenNameLabel" destination="NUD-Yr-x45" id="sg8-Qb-rcx"/>
+                <outlet property="shareButton" destination="Mld-uq-s8e" id="NQM-YE-Ldb"/>
             </connections>
             <point key="canvasLocation" x="160" y="-24.7376311844078"/>
         </view>
